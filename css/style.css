@@ -1,0 +1,129 @@
+/* Base */
+
+body{
+    overflow-x: hidden;
+}
+.book{
+  width: 60%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 992px) {
+.border-top-menu{
+      position: relative;
+}
+.border-top-menu:before{
+  content: '';
+  position: absolute;
+  left: 100px;
+  top: -20px;/*線の上下位置*/
+  display: inline-block;
+  width: 330px;/*線の長さ*/
+  height: 5px;/*線の太さ*/
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);/*位置調整*/
+  background-color: black;/*線の色*/
+  border-radius: 2px;/*線の丸み*/
+}
+}
+
+.copyright{
+    width: 40%;
+}
+.navbar{
+  box-shadow: none;
+  margin: 0 auto;
+  width: 80%;
+}
+.ct{
+  width: 92%;
+  margin: 0 auto;
+}
+.story-head{
+  height:530px;
+}
+.story-head-image{
+  height:100%;
+}
+@media screen and (max-width: 992px) {
+.border-top-menu{
+text-align: center;
+padding: 10px 0;
+}
+.copyright{
+    width: 90%;
+}
+.book{
+  width: 100%;
+}
+.navbar{
+  box-shadow: none;
+  margin: 0 auto;
+  width: 100%;
+}
+.story-head{
+  height:777px;
+}
+.s-02{
+  padding: 70px;
+}
+}
+
+@media screen and (max-width: 780px) {
+.s-02{
+  padding: 10px;
+}
+}
+/* Decorations */
+
+hr.st01 {
+  border-top: 1px dashed #8c8b8b; 
+}
+hr.st01:after {
+  content: '\002702'; 
+  display: inline-block; 
+  position: relative; 
+  top: -12px; 
+  left: 40px; 
+  padding: 0 3px; 
+  background: #f0f0f0; 
+  color: #8c8b8b; 
+  font-size: 18px; 
+}
+
+
+hr.character {
+  border-top: 4px double #bbb;
+  text-align: center;
+}
+hr.character:after {
+  content: '…………';
+  display: inline-block;
+  position: relative;
+  top: -15px;
+  padding: 0 10px;
+  background: #ccc;
+  color: #555;
+  font-size: 18px;
+}
+
+nav ul a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+nav ul a::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #333;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: transform .3s;
+}
+nav ul a:hover::after {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}

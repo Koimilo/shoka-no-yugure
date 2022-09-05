@@ -1,0 +1,11 @@
+$(function(){
+    setTimeout(function(){
+        $(".scnav").hide(600);
+    },1500);
+    $("#bb-nav-next").click(function(){
+        $(".scnav").show();
+        setTimeout(function(){
+            $(".scnav").hide(600);
+        },1500);
+    });
+});
